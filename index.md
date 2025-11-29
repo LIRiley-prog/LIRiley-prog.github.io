@@ -33,12 +33,12 @@ Ethics Papers
 
 ### [Paper 1 Title](/pdf/sample_presentation.pdf)
 
--   **Class:**  
--   **Grade:**
+-   **Class:**  Data Structure Anaysis
+-   **Grade:** 92
 
 ### [Paper 2 Title](/pdf/sample_presentation.pdf)
 
--   **Class:** 
+-   **Class:** Database Management
 -   **Grade:**
 
 ### [Paper 3 Title](/pdf/sample_presentation.pdf)
