@@ -22,7 +22,7 @@ Programming Projects
 ![Project 3 Thumbnail Name](images/dummy_thumbnail.jpg)
 
 ---
-### [ | CSCI 332](project1)
+### [DIY Router| CSCI 332](project1)
 
 ![Project 4 Thumbnail Name](images/dummy_thumbnail.jpg)
 
