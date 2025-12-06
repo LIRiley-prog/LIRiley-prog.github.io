@@ -31,7 +31,7 @@ Programming Projects
 Ethics Papers
 -------------
 
-### [Paper 1 Title](/pdf/sample_presentation.pdf)
+### [Software Ethics](/pdf/sample_presentation.pdf)
 
 -   **Class:**  Data Structure Anaysis
 -   **Grade:** 92
@@ -39,11 +39,11 @@ Ethics Papers
 ### [Paper 2 Title](/pdf/sample_presentation.pdf)
 
 -   **Class:** Database Management
--   **Grade:**
+-   **Grade:** N/A
 
 ### [Paper 3 Title](/pdf/sample_presentation.pdf)
 
--   **Class:** 
+-   **Class:** Procedural Programming
 -   **Grade:**
 
 ---
