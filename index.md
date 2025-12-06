@@ -31,7 +31,7 @@ Programming Projects
 Ethics Papers
 -------------
 
-### [Software Ethics](/pdf/)
+### [Software Ethics](pdf/Ethics (1).docx)
 
 -   **Class:**  Data Structure Anaysis
 -   **Grade:** 92
