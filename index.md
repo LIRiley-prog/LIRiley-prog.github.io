@@ -19,7 +19,7 @@ Programming Projects
 ---
 ### [PDF Parser | CSCI 325](project1)
 
-(Screenshot 2025-12-05 213128.png)
+(images/Screenshot 2025-12-05 213128.png)
 
 ---
 ### [DIY Router| CSCI 332](project1)
@@ -31,7 +31,7 @@ Programming Projects
 Ethics Papers
 -------------
 
-### [Software Ethics](/pdf/sample_presentation.pdf)
+### [Software Ethics](/pdf/)
 
 -   **Class:**  Data Structure Anaysis
 -   **Grade:** 92
