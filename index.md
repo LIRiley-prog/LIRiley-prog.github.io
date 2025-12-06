@@ -19,7 +19,7 @@ Programming Projects
 ---
 ### [PDF Parser | CSCI 325](project1)
 
-(images/Screenshot 2025-12-05 213128.png)
+![Project 2 Thumbnail Name]((images/Screenshot 2025-12-05 213128.png)
 
 ---
 ### [DIY Router| CSCI 332](project1)
