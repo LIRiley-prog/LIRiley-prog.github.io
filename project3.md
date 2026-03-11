@@ -3,15 +3,15 @@
 PDF Citation Parser
 ===================
 
--   **Class:** CSCI 325 – Object-Oriented Programming
--   **Grade:** C+
+-   **Class:** CSCI 495 – Systems Analysis & Software Design
+-   **Grade:** A
 -   **Language(s):** Python (Backend), JavaScript/React (Frontend), Flask
 -   **Source Code Repository:** [csci495-Fall25-greenTeam-citationParser](https://github.com/LIRiley-prog/csci495-Fall25-greenTeam-citationParser)  
     (Please [email me](mailto:Liriley@csustudent.net?subject=GitHub%20Access) to request access.)
 
 ## Project Description
 
-The PDF Citation Parser is a full-stack web application developed as a team project (Green Team) for CSCI 325 – Software Engineering. The application allows users to upload academic PDF documents and automatically extract and parse citation references from them.
+The PDF Citation Parser is a full-stack web application developed as a team project (Green Team) for CSCI 495 – Systems Analysis & Software Design. The application allows users to upload academic PDF documents and automatically extract and parse citation references from them.
 
 The backend is powered by **Python** and **Flask**, using the `pymupdf4llm` library to convert PDF content into structured Markdown format, which is then processed to identify and extract citation data. The frontend is built with **React**, providing a clean interface for uploading PDFs and viewing the parsed results. A **Makefile** automates environment setup, server startup, and testing.
 

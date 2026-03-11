@@ -10,25 +10,25 @@ layout: default
 
 ---
 
-#### [Hangman \| CSCI 301](project1)
+#### [Custom Map \| CSCI 315](project1)
 
 ![screenshot](images/hangman.jpg)
 
 ---
 
-#### [Connect Four \| CSCI 315](project2)
+#### [Connect Four \| CSCI 325](project2)
 
 ![screenshot](images/connect_four.jpg)
 
 ---
 
-#### [PDF Citation Parser \| CSCI 325](project3)
+#### [PDF Citation Parser \| CSCI 495](project3)
 
 ![screenshot](images/pdf_parser.jpg)
 
 ---
 
-#### [DIY Router \| CSCI 332](project4)
+#### [AI Robot – Senior Project \| CSCI 499](project4)
 
 ![screenshot](images/diy_router.jpg)
 
@@ -36,20 +36,20 @@ layout: default
 
 ### Ethics Papers
 
-#### [Software Ethics](pdf/ethics1.pdf)
+#### [Software Ethics](pdf/Ethics%20(1).pdf)
 
-- **Class:** CSCI 315 – Data Structure Analysis
-- **Grade:** 92
+- **Class:** CSCI 405 – Principles of Cybersecurity
+- **Grade:** B
 
 #### Paper 2 Title
 
-- **Class:** CSCI 419 – Database Management
-- **Grade:** B
+- **Class:** 
+- **Grade:**
 
 #### Paper 3 Title
 
-- **Class:** CSCI 235 – Procedural Programming
-- **Grade:** C
+- **Class:** 
+- **Grade:**
 
 ---
 

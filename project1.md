@@ -1,40 +1,40 @@
 [Back to Portfolio](./)
 
-Hangman
-=======
+Custom Map
+==========
 
--   **Class:** CSCI 301 – Survey of Scripting Languages
--   **Grade:** B+
+-   **Class:** CSCI 315 – Data Structure Analysis
+-   **Grade:** In Progress
 -   **Language(s):** C++
--   **Source Code Repository:** [CSCI-301-code-repository](https://github.com/LIRiley-prog/CSCI-301-code-repository)  
+-   **Source Code Repository:** [CSCI-315-2026-Spring-Solutions-](https://github.com/LIRiley-prog/CSCI-315-2026-Spring-Solutions-)  
     (Please [email me](mailto:Liriley@csustudent.net?subject=GitHub%20Access) to request access.)
 
 ## Project Description
 
-This project is a command-line implementation of the classic word-guessing game Hangman, written in C++ as the final project for CSCI 301 – Programming Languages. The program selects a secret word and challenges the player to guess it one letter at a time before running out of attempts.
+The Custom Map project was built as part of CSCI 315 – Data Structure Analysis. The goal was to implement a Map data structure from scratch in C++ — similar to how `std::map` works in the C++ standard library, but built entirely by hand without using any built-in containers.
 
-The project demonstrates core C++ programming concepts including string manipulation, control flow, loops, and user input handling. As the player makes incorrect guesses, the familiar hangman figure is progressively drawn in the terminal, adding a visual element to the game.
+The Map stores key-value pairs and supports operations like inserting new entries, retrieving values by key, removing entries, and searching for keys using binary search. Internally, the data is kept in a sorted array, which makes lookup fast and predictable.
+
+Building the Map also required implementing proper memory management — including a copy constructor and a copy assignment operator — to make sure the data structure behaves safely when copied or assigned to another variable.
 
 ## How to Compile and Run the Program
 
 ```bash
-g++ -o hangman hangman.cpp
-./hangman
+g++ -o map_test main.cpp Map.cpp
+./map_test
 ```
 
 ## UI Design
 
-The game runs entirely in the terminal. Upon launch, the program displays a series of blank spaces representing the letters of the secret word. The player is prompted to enter one letter at a time.
+The program runs as a command-line application. Test cases are run automatically on startup and print their results to the terminal. Output includes:
 
-- **Correct guess:** The letter is revealed in its correct position(s) in the word.
-- **Incorrect guess:** The hangman figure gains a new body part, and the incorrect letter is added to a list of used guesses.
-- **Win condition:** The player wins by correctly identifying all letters before the hangman is complete.
-- **Lose condition:** After a set number of incorrect guesses, the full hangman is drawn and the secret word is revealed.
-
-The terminal display updates after each guess, showing the current state of the word, the hangman figure, and all previously guessed letters.
+- **Inserted entries** — confirming key-value pairs were added successfully
+- **Lookup results** — displaying values retrieved by key
+- **Remove confirmations** — showing entries before and after deletion
+- **Edge case results** — handling duplicate keys and out-of-range lookups
 
 ## Additional Considerations
 
-This project was developed as part of CSCI 301 – Programming Languages, which introduced students to multiple programming paradigms and languages including Prolog, Perl, Racket, and C++. The Hangman final project served as a comprehensive application of C++ fundamentals learned throughout the course.
+This project reinforced core concepts in data structures including sorted storage, binary search, and manual memory management with `new` and `delete`. Implementing copy semantics (copy constructor and assignment operator) was a key challenge, requiring careful handling of dynamic memory to avoid double-frees and memory leaks.
 
 [Back to Portfolio](./)

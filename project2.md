@@ -3,8 +3,8 @@
 Connect Four
 ============
 
--   **Class:** CSCI 315 – Data Structure Analysis
--   **Grade:** In Progress
+-   **Class:** CSCI 325 – Object-Oriented Programming
+-   **Grade:** C+
 -   **Language(s):** Java (Swing GUI)
 -   **Source Code Repository:** [Connect_Four](https://github.com/LIRiley-prog/Connect_Four)  
     (Please [email me](mailto:Liriley@csustudent.net?subject=GitHub%20Access) to request access.)

@@ -1,41 +1,41 @@
 [Back to Portfolio](./)
 
-DIY Router
-==========
+AI Robot – Senior Project
+==========================
 
--   **Class:** CSCI 332 – Applied Networking
--   **Grade:** C+
--   **Language(s):** C++
--   **Source Code Repository:** [GitHub](https://github.com/LIRiley-prog)  
+-   **Class:** CSCI 499 – Senior Project Implementation/Defense
+-   **Grade:** In Progress
+-   **Language(s):** Python
+-   **Source Code Repository:** [ai_robot](https://github.com/LIRiley-prog/ai_robot)  
     (Please [email me](mailto:Liriley@csustudent.net?subject=GitHub%20Access) to request access.)
 
 ## Project Description
 
-The DIY Router project was a hands-on networking project completed as part of CSCI 332 – Applied Networking. The project involved building a functional router from scratch — both the physical hardware and the software — to create a local area network (LAN) capable of transferring images and files between connected devices.
+The AI Robot project is a capstone senior project built using a Meccanoid G15KS robot body controlled by a Raspberry Pi 5. The robot can hold a conversation, respond to voice commands, and move its arms using servo motors.
 
-The hardware component included hand-crimping custom Ethernet cables and physically assembling the router setup. The software component was written in C++ and implemented the networking logic required to route traffic between devices on the same network, enabling one machine to send images and files directly to another through the DIY router.
+The software is written in Python and uses several libraries to handle different parts of the project. OpenAI's API is used to generate intelligent responses to whatever the user says. Vosk handles offline speech recognition so the robot can understand spoken commands without needing an internet connection to listen. The robot's servo motors are controlled through a PCA9685 board, and wheel movement is managed using the Gpiozero library.
 
-This project bridged the gap between theoretical networking concepts and real-world hardware, giving direct experience with how data physically travels across a network — from the cable level all the way up to the application layer.
+The project was developed collaboratively as part of a senior capstone team (Green Team) and involved planning, designing, and presenting the system over two semesters.
 
 ## How to Compile and Run the Program
 
 ```bash
-g++ -o router router.cpp
-./router
+pip install openai vosk gpiozero adafruit-circuitpython-pca9685
+python main.py
 ```
 
 ## UI Design
 
-The program runs as a command-line application. Once the router is active and devices are connected via the custom Ethernet cables, users can:
+The robot is controlled entirely through voice. Once running:
 
-- **Send a file or image** — specify a file path and the destination device on the network
-- **Receive files** — the program listens for incoming transfers from other connected devices
-- **View connection status** — see which devices are recognized on the local network
+- **Say a wake phrase** — the robot wakes up and begins listening
+- **Ask a question or give a command** — the robot processes it and responds out loud using text-to-speech
+- **Say a sleep phrase** — the robot stops listening and goes idle
 
-Transfers are confirmed in the terminal once the file is successfully received on the other end.
+Arm movements are triggered automatically based on the conversation context. The terminal shows a log of what the robot heard and how it responded.
 
 ## Additional Considerations
 
-One of the most valuable aspects of this project was the physical networking experience. Hand-crimping Ethernet cables required learning the T-568B wiring standard and testing each cable for continuity. Combined with the C++ socket programming needed to transfer data between devices, this project demonstrated a full-stack understanding of networking — from the physical layer to the application layer.
+One of the biggest challenges was integrating multiple hardware components — servos, motors, and a microphone — all running at the same time without conflicts. Managing threads in Python was important to make sure the robot could listen and respond simultaneously without freezing up. Coordinating the team's work across two semesters also required using Git and holding regular status meetings.
 
 [Back to Portfolio](./)
