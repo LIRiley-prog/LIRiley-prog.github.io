@@ -1,48 +1,47 @@
 [Back to Portfolio](./)
 
-Project 1 Title
-===============
+PDF Citation Parser
+===================
 
--   **Class:** 
--   **Grade:** 
--   **Language(s):** 
--   **Source Code Repository:** [features/mastering-markdown](https://guides.github.com/features/mastering-markdown/)  
-    (Please [email me](mailto:example@csustudent.net?subject=GitHub%20Access) to request access.)
+-   **Class:** CSCI 325 – Object-Oriented Programming
+-   **Grade:** C+
+-   **Language(s):** Python (Backend), JavaScript/React (Frontend), Flask
+-   **Source Code Repository:** [csci495-Fall25-greenTeam-citationParser](https://github.com/LIRiley-prog/csci495-Fall25-greenTeam-citationParser)  
+    (Please [email me](mailto:Liriley@csustudent.net?subject=GitHub%20Access) to request access.)
 
-## Project description
+## Project Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The PDF Citation Parser is a full-stack web application developed as a team project (Green Team) for CSCI 325 – Software Engineering. The application allows users to upload academic PDF documents and automatically extract and parse citation references from them.
 
-## How to compile and run the program
+The backend is powered by **Python** and **Flask**, using the `pymupdf4llm` library to convert PDF content into structured Markdown format, which is then processed to identify and extract citation data. The frontend is built with **React**, providing a clean interface for uploading PDFs and viewing the parsed results. A **Makefile** automates environment setup, server startup, and testing.
 
-How to compile (if applicable) and run the project.
+This was a collaborative team project, giving practical experience in Agile software development, version control with Git, and full-stack web application architecture.
+
+## How to Run the Program
 
 ```bash
-cd ./project
-python setup.py
+# Set up environment and run the Flask server
+make setup
+make run
+
+# Run tests
+make test
 ```
 
-If the programming language does not require compilation, the update the heading to be “How to run the program.” If your application is deployed on a remote service, including instructions on how to deploy it.
+The React frontend runs on `localhost:3000` and the Flask backend serves at `localhost:5000`.
 
 ## UI Design
 
-Almost every program requires user interaction, even command-line programs. Include in this section the tasks the user can complete and what the program does. You don't need to include how it works here; that information may go in the project description or in an additional section, depending on its significance.
+The web application features a clean upload interface where users can:
 
-Lorem ipsum dolor sit amet (see Fig 1), consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat (see Fig 2). Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (see Fig 3).
+- **Upload a PDF** — drag and drop or browse for an academic paper
+- **Parse Citations** — the backend processes the PDF and extracts all reference citations
+- **View Results** — parsed citations are displayed in a readable, structured list
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 1. The launch screen
+The frontend dynamically updates as results are returned from the Flask API, providing a smooth user experience without page reloads.
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 2. Example output after input is processed.
+## Additional Considerations
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 3. Feedback when an error occurs.
-
-## 3. Additional Considerations
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+This project was developed using Agile methodology with a team of students. My role as part of the Green Team involved contributing to both the backend PDF processing pipeline and integration with the React frontend. The project demonstrates real-world software engineering practices including team collaboration, API design, automated build tooling, and full-stack development.
 
 [Back to Portfolio](./)

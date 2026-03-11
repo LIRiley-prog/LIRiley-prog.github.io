@@ -1,48 +1,40 @@
 [Back to Portfolio](./)
 
-Project 1 Title
-===============
+Hangman
+=======
 
--   **Class:** 
--   **Grade:** 
--   **Language(s):** 
--   **Source Code Repository:** [features/mastering-markdown](https://guides.github.com/features/mastering-markdown/)  
-    (Please [email me](mailto:example@csustudent.net?subject=GitHub%20Access) to request access.)
+-   **Class:** CSCI 301 – Survey of Scripting Languages
+-   **Grade:** B+
+-   **Language(s):** C++
+-   **Source Code Repository:** [CSCI-301-code-repository](https://github.com/LIRiley-prog/CSCI-301-code-repository)  
+    (Please [email me](mailto:Liriley@csustudent.net?subject=GitHub%20Access) to request access.)
 
-## Project description
+## Project Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This project is a command-line implementation of the classic word-guessing game Hangman, written in C++ as the final project for CSCI 301 – Programming Languages. The program selects a secret word and challenges the player to guess it one letter at a time before running out of attempts.
 
-## How to compile and run the program
+The project demonstrates core C++ programming concepts including string manipulation, control flow, loops, and user input handling. As the player makes incorrect guesses, the familiar hangman figure is progressively drawn in the terminal, adding a visual element to the game.
 
-How to compile (if applicable) and run the project.
+## How to Compile and Run the Program
 
 ```bash
-cd ./project
-python setup.py
+g++ -o hangman hangman.cpp
+./hangman
 ```
-
-If the programming language does not require compilation, the update the heading to be “How to run the program.” If your application is deployed on a remote service, including instructions on how to deploy it.
 
 ## UI Design
 
-Almost every program requires user interaction, even command-line programs. Include in this section the tasks the user can complete and what the program does. You don't need to include how it works here; that information may go in the project description or in an additional section, depending on its significance.
+The game runs entirely in the terminal. Upon launch, the program displays a series of blank spaces representing the letters of the secret word. The player is prompted to enter one letter at a time.
 
-Lorem ipsum dolor sit amet (see Fig 1), consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat (see Fig 2). Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (see Fig 3).
+- **Correct guess:** The letter is revealed in its correct position(s) in the word.
+- **Incorrect guess:** The hangman figure gains a new body part, and the incorrect letter is added to a list of used guesses.
+- **Win condition:** The player wins by correctly identifying all letters before the hangman is complete.
+- **Lose condition:** After a set number of incorrect guesses, the full hangman is drawn and the secret word is revealed.
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 1. The launch screen
+The terminal display updates after each guess, showing the current state of the word, the hangman figure, and all previously guessed letters.
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 2. Example output after input is processed.
+## Additional Considerations
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 3. Feedback when an error occurs.
-
-## 3. Additional Considerations
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+This project was developed as part of CSCI 301 – Programming Languages, which introduced students to multiple programming paradigms and languages including Prolog, Perl, Racket, and C++. The Hangman final project served as a comprehensive application of C++ fundamentals learned throughout the course.
 
 [Back to Portfolio](./)

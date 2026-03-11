@@ -1,68 +1,70 @@
-Portfolio
-=========
-
-Programming Projects
---------------------
-
-*For access to my private project repositories, please [email me](mailto:example@csustudent.net?subject=GitHub%20Access) with the subject line, GitHub Access.
-
 ---
-### [Connect Four | CSCI 301](project1)
-
-![Project 1 Thumbnail Name](images/dummy_thumbnail.jpg)
-
+layout: default
 ---
-### [Hangman | CSCI 315](project1)
 
-![Project 2 Thumbnail Name](images/dummy_thumbnail.jpg)
+## Portfolio
 
----
-### [PDF Parser | CSCI 325](project1)
+### Programming Projects
 
-![Project 2 Thumbnail Name](images/Screenshot 2025-12-05 213128.png)
-
----
-### [DIY Router| CSCI 332](project1)
-
-![Project 4 Thumbnail Name](images/dummy_thumbnail.jpg)
+\*For access to my private project repositories, please [email me](mailto:Liriley@csustudent.net?subject=GitHub%20Access) with the subject line, GitHub Access.
 
 ---
 
-Ethics Papers
--------------
+#### [Hangman \| CSCI 301](project1)
 
-### [Software Ethics](pdf/Ethics (1).pdf)
-
--   **Class:**  Data Structure Anaysis
--   **Grade:** 92
-
-### [Paper 2 Title](/pdf/sample_presentation.pdf)
-
--   **Class:** Database Management
--   **Grade:** N/A
-
-### [Paper 3 Title](/pdf/sample_presentation.pdf)
-
--   **Class:** Procedural Programming
--   **Grade:**
+![screenshot](images/hangman.jpg)
 
 ---
 
-Presentations
--------------
+#### [Connect Four \| CSCI 315](project2)
 
-### [Presentation 1 Title](/pdf/sample_presentation.pdf)
+![screenshot](images/connect_four.jpg)
 
-- **Class:** 
+---
+
+#### [PDF Citation Parser \| CSCI 325](project3)
+
+![screenshot](images/pdf_parser.jpg)
+
+---
+
+#### [DIY Router \| CSCI 332](project4)
+
+![screenshot](images/diy_router.jpg)
+
+---
+
+### Ethics Papers
+
+#### [Software Ethics](pdf/ethics1.pdf)
+
+- **Class:** CSCI 315 – Data Structure Analysis
+- **Grade:** 92
+
+#### Paper 2 Title
+
+- **Class:** CSCI 419 – Database Management
+- **Grade:** B
+
+#### Paper 3 Title
+
+- **Class:** CSCI 235 – Procedural Programming
+- **Grade:** C
+
+---
+
+### Presentations
+
+#### Presentation 1 Title
+
+- **Class:**
 - **Grade:**
 
+#### Presentation 2 Title
 
-### [Presentation 2 Title](/pdf/sample_presentation.pdf)
-
-- **Class:** 
+- **Class:**
 - **Grade:**
 
 ---
 
-<p style="font-size:11px">Page template forked from <a href="https://github.com/csu-cs/csci-portfolio">CSU-CS</a></p>
-<!-- Remove above link if you don't want to attributive -->
+Page template forked from [CSU-CS](https://github.com/csu-cs/csci-portfolio)

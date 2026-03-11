@@ -1,48 +1,39 @@
 [Back to Portfolio](./)
 
-Project 1 Title
-===============
+DIY Router
+==========
 
--   **Class:** 
--   **Grade:** 
--   **Language(s):** 
--   **Source Code Repository:** [features/mastering-markdown](https://guides.github.com/features/mastering-markdown/)  
-    (Please [email me](mailto:example@csustudent.net?subject=GitHub%20Access) to request access.)
+-   **Class:** CSCI 332 – Applied Networking
+-   **Grade:** C+
+-   **Language(s):** C++
+-   **Source Code Repository:** [GitHub](https://github.com/LIRiley-prog)  
+    (Please [email me](mailto:Liriley@csustudent.net?subject=GitHub%20Access) to request access.)
 
-## Project description
+## Project Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The DIY Router project is a software-defined network router implemented in C++ as part of CSCI 332 – Computer Networks. The program simulates core routing functionality including packet forwarding, routing table management, and network address processing.
 
-## How to compile and run the program
+The project deepened understanding of how physical routers operate at the software level — including how packets are received, how routing tables are consulted to determine the next hop, and how data is forwarded across network interfaces. Key networking concepts applied include IP addressing, subnetting, and the logic behind both static and dynamic routing.
 
-How to compile (if applicable) and run the project.
+## How to Compile and Run the Program
 
 ```bash
-cd ./project
-python setup.py
+g++ -o router router.cpp
+./router
 ```
-
-If the programming language does not require compilation, the update the heading to be “How to run the program.” If your application is deployed on a remote service, including instructions on how to deploy it.
 
 ## UI Design
 
-Almost every program requires user interaction, even command-line programs. Include in this section the tasks the user can complete and what the program does. You don't need to include how it works here; that information may go in the project description or in an additional section, depending on its significance.
+The DIY Router operates as a command-line application. Upon launch, the program initializes a routing table and begins processing simulated network packets. Users can interact with the router to:
 
-Lorem ipsum dolor sit amet (see Fig 1), consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat (see Fig 2). Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (see Fig 3).
+- **View the routing table** — display all known routes, next hops, and interface assignments
+- **Simulate packet forwarding** — input a destination IP address and observe which route the router selects
+- **Add/remove routes** — manually modify the routing table to observe how forwarding decisions change
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 1. The launch screen
+The console output clearly displays packet flow, routing decisions, and any routing errors (such as unreachable destinations).
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 2. Example output after input is processed.
+## Additional Considerations
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 3. Feedback when an error occurs.
-
-## 3. Additional Considerations
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+This project provided hands-on experience with the internals of network routing that goes beyond theoretical study. Implementing routing logic in C++ required careful attention to binary arithmetic for subnet masking, efficient lookup structures for the routing table, and handling edge cases such as default routes and unreachable hosts.
 
 [Back to Portfolio](./)

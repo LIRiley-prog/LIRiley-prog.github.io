@@ -1,48 +1,49 @@
 [Back to Portfolio](./)
 
-Project 1 Title
-===============
+Connect Four
+============
 
--   **Class:** 
--   **Grade:** 
--   **Language(s):** 
--   **Source Code Repository:** [features/mastering-markdown](https://guides.github.com/features/mastering-markdown/)  
-    (Please [email me](mailto:example@csustudent.net?subject=GitHub%20Access) to request access.)
+-   **Class:** CSCI 315 – Data Structure Analysis
+-   **Grade:** In Progress
+-   **Language(s):** Java (Swing GUI)
+-   **Source Code Repository:** [Connect_Four](https://github.com/LIRiley-prog/Connect_Four)  
+    (Please [email me](mailto:Liriley@csustudent.net?subject=GitHub%20Access) to request access.)
 
-## Project description
+## Project Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Connect Four is a fully playable two-player strategy game built in Java using the Swing GUI framework. The project recreates the classic token-dropping board game where two players take turns dropping colored pieces into a 6-row, 7-column vertical grid. The first player to align four of their pieces horizontally, vertically, or diagonally wins the game.
 
-## How to compile and run the program
+The application features a graphical menu system, player name and color selection with input validation, a live game board, and an end screen with replay functionality. A powerup system was also designed into the architecture, allowing for extended gameplay features such as piece swapping and random moves.
 
-How to compile (if applicable) and run the project.
+The project is organized under the `csu.csci325` package and structured across multiple Java classes to separate concerns: menu logic, game state, powerup behavior, and end-game handling.
+
+## How to Compile and Run the Program
+
+Compile and run using any Java IDE (such as IntelliJ IDEA or Eclipse), or from the command line:
 
 ```bash
-cd ./project
-python setup.py
+javac *.java
+java ConnectFour
 ```
-
-If the programming language does not require compilation, the update the heading to be “How to run the program.” If your application is deployed on a remote service, including instructions on how to deploy it.
 
 ## UI Design
 
-Almost every program requires user interaction, even command-line programs. Include in this section the tasks the user can complete and what the program does. You don't need to include how it works here; that information may go in the project description or in an additional section, depending on its significance.
+The game opens with a **main menu window** containing two buttons: **Start** and **Rules**. Players enter their names and select their token colors before the game begins.
 
-Lorem ipsum dolor sit amet (see Fig 1), consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat (see Fig 2). Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (see Fig 3).
+**During gameplay:**
+- The board is rendered graphically as a grid of circles
+- Players click to drop their token into a column
+- The board updates in real time after each move
+- Invalid moves (full column) are handled gracefully
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 1. The launch screen
+**After the game ends:**
+- An **End Screen** displays the winner
+- Players can choose to **Restart** the game or **Exit** the application
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 2. Example output after input is processed.
+**Menu validation:** The `MenuLogic` class ensures players cannot select the same color, preventing confusion during play.
 
-![screenshot](images/dummy_thumbnail.jpg)  
-Fig 3. Feedback when an error occurs.
+## Additional Considerations
 
-## 3. Additional Considerations
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+This project demonstrates object-oriented design principles in Java, including class decomposition, event-driven programming with Swing listeners, and input validation. The `Powerup` class was architected to support future feature expansion, showcasing forward-thinking software design.
 
 [Back to Portfolio](./)
