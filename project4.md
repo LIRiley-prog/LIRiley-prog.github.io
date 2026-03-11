@@ -11,9 +11,11 @@ DIY Router
 
 ## Project Description
 
-The DIY Router project is a software-defined network router implemented in C++ as part of CSCI 332 – Computer Networks. The program simulates core routing functionality including packet forwarding, routing table management, and network address processing.
+The DIY Router project was a hands-on networking project completed as part of CSCI 332 – Applied Networking. The project involved building a functional router from scratch — both the physical hardware and the software — to create a local area network (LAN) capable of transferring images and files between connected devices.
 
-The project deepened understanding of how physical routers operate at the software level — including how packets are received, how routing tables are consulted to determine the next hop, and how data is forwarded across network interfaces. Key networking concepts applied include IP addressing, subnetting, and the logic behind both static and dynamic routing.
+The hardware component included hand-crimping custom Ethernet cables and physically assembling the router setup. The software component was written in C++ and implemented the networking logic required to route traffic between devices on the same network, enabling one machine to send images and files directly to another through the DIY router.
+
+This project bridged the gap between theoretical networking concepts and real-world hardware, giving direct experience with how data physically travels across a network — from the cable level all the way up to the application layer.
 
 ## How to Compile and Run the Program
 
@@ -24,16 +26,16 @@ g++ -o router router.cpp
 
 ## UI Design
 
-The DIY Router operates as a command-line application. Upon launch, the program initializes a routing table and begins processing simulated network packets. Users can interact with the router to:
+The program runs as a command-line application. Once the router is active and devices are connected via the custom Ethernet cables, users can:
 
-- **View the routing table** — display all known routes, next hops, and interface assignments
-- **Simulate packet forwarding** — input a destination IP address and observe which route the router selects
-- **Add/remove routes** — manually modify the routing table to observe how forwarding decisions change
+- **Send a file or image** — specify a file path and the destination device on the network
+- **Receive files** — the program listens for incoming transfers from other connected devices
+- **View connection status** — see which devices are recognized on the local network
 
-The console output clearly displays packet flow, routing decisions, and any routing errors (such as unreachable destinations).
+Transfers are confirmed in the terminal once the file is successfully received on the other end.
 
 ## Additional Considerations
 
-This project provided hands-on experience with the internals of network routing that goes beyond theoretical study. Implementing routing logic in C++ required careful attention to binary arithmetic for subnet masking, efficient lookup structures for the routing table, and handling edge cases such as default routes and unreachable hosts.
+One of the most valuable aspects of this project was the physical networking experience. Hand-crimping Ethernet cables required learning the T-568B wiring standard and testing each cable for continuity. Combined with the C++ socket programming needed to transfer data between devices, this project demonstrated a full-stack understanding of networking — from the physical layer to the application layer.
 
 [Back to Portfolio](./)
