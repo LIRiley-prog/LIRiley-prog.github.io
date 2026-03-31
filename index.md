@@ -34,20 +34,6 @@ layout: default
 
 ---
 
-### Senior Project
-
-#### [Gizmo – Meccanoid AI Assistant \| CSCI 498 & 499](senior_project)
-
-![screenshot](images/gizmo_robot.png)
-
-A Raspberry Pi 5–powered AI robot built on a reprogrammed Meccanoid G15KS body. Gizmo uses voice recognition, GPT-4o conversational AI, and servo-driven gestures to interact naturally with users.
-
-- **Repositories:** [Project Documentation](https://github.com/LIRiley-prog/CSU-Senior-Project) · [Source Code](https://github.com/LIRiley-prog/ai_robot)
-- **Tech Stack:** Python, OpenAI API, Vosk, PCA9685, Raspberry Pi 5
-- **Status:** In Progress
-
----
-
 ### Ethics Papers
 
 #### [Software Ethics](pdf/Ethics%20(1).pdf)
