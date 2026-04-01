@@ -15,7 +15,6 @@ The AI Robot project is a capstone senior project built using a Meccanoid G15KS 
 
 The software is written in Python and uses several libraries to handle different parts of the project. OpenAI's API is used to generate intelligent responses to whatever the user says. Vosk handles offline speech recognition so the robot can understand spoken commands without needing an internet connection to listen. The robot's servo motors are controlled through a PCA9685 board, and wheel movement is managed using the Gpiozero library.
 
-The project was developed collaboratively as part of a senior capstone team (Green Team) and involved planning, designing, and presenting the system over two semesters.
 
 ## How to Compile and Run the Program
 
