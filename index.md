@@ -10,6 +10,14 @@ layout: default
 
 ---
 
+#### [Gizmo – AI-Powered Meccanoid Robot \| CSCI 498/499](project4)
+
+![Gizmo Robot](images/gizmo_robot.png)
+
+A capstone senior project that transforms a Meccanoid G15KS toy robot into a fully interactive AI assistant powered by a Raspberry Pi 5, featuring conversational AI (GPT-4o-mini), custom bit-bang servo control, live web search, persistent memory, and expressive gestures.
+
+---
+
 #### [Custom Map \| CSCI 315](project1)
 
 ![screenshot](images/hangman.jpg)
@@ -25,12 +33,6 @@ layout: default
 #### [PDF Citation Parser \| CSCI 495](project3)
 
 ![screenshot](images/pdf_parser.jpg)
-
----
-
-#### [AI Robot – Senior Project \| CSCI 499](project4)
-
-![screenshot](images/gizmo_robot.png)
 
 ---
 
