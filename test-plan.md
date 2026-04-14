@@ -202,18 +202,18 @@ Requirements Traceability Matrix
 | ------ | ----------- | ---- | ------------ | -------- |
 | FR-1 | Voice Wake/Sleep — Robot wakes on "Hey Gizmo" and sleeps on "Goodnight Gizmo" | Functional | Unit #1, #2, #29, Regression #4 | Yes |
 | FR-2 | Conversational AI — Hold natural, multi-turn conversations using GPT-4o-mini | Functional | Unit #23, #24, #28, Integration #5 | Yes |
-| FR-3 | Voice Command Execution — Interpret and execute spoken movement and gesture commands | Functional | Unit #3–#7, #8–#17, Integration #2, #3 | Yes |
-| FR-4 | Web Search — Search the web for real-time information when the query requires it | Functional | Integration #6 | Yes |
-| FR-5 | Persistent Memory — Remember user's name, facts, and events across power cycles | Functional | Unit #31, UAT #5 | Yes |
-| FR-6 | Text-to-Speech — Speak responses with a consistent, natural-sounding voice | Functional | Integration #1, Regression #3 | Yes |
-| FR-7 | Volume Control — Adjust speaker volume via voice commands | Functional | Unit #18–#22 | Yes |
-| FR-8 | NLP Self-Correction — Detect and resolve mid-sentence corrections | Functional | Unit #30 | Yes |
-| FR-9 | AI Function Calling — GPT-4o-mini selects correct tool for complex commands | Functional | Unit #25, #26, #27 | Yes |
+| FR-3 | Voice Command Execution — Interpret and execute spoken movement and gesture commands | Functional | Unit #3–#7, #25–#27, #30, Integration #2, #3 | Yes |
+| FR-4 | Physical Gesture Library — Perform at least 15 distinct physical gestures | Functional | Unit #8–#17, Integration #2 | Yes |
+| FR-5 | Web Search — Search the web for real-time information when the query requires it | Functional | Integration #6, UAT #3 | Yes |
+| FR-6 | Persistent Memory — Remember user's name, facts, and events across power cycles | Functional | Unit #31, UAT #5 | Yes |
+| FR-7 | Text-to-Speech — Speak responses with a consistent, natural-sounding voice | Functional | Integration #1, Regression #3 | Yes |
+| FR-8 | Idle Behavior — Perform subtle autonomous animations when idle | Functional | Integration #9 (observed during 4-hr test) | Yes |
+| FR-9 | Volume Control — Adjust speaker volume via voice commands | Functional | Unit #18–#22 | Yes |
+| FR-10 | Shutdown — Safely shut down via voice command, parking all servos | Functional | Integration #11 | Yes |
 | NFR-1 | Response Latency — Simple commands < 2s, AI queries < 5s | Non-Functional | Integration #7 | Yes |
 | NFR-2 | Reliability — Run as systemd service with auto-restart | Non-Functional | Integration #11 | Yes |
 | NFR-3 | Graceful Degradation — Continue operating if subsystems fail (TTS fallback, servo skip) | Non-Functional | Integration #10, Regression #3 | Yes |
-| NFR-4 | Stability — No memory leaks or deadlocks over extended operation | Non-Functional | Integration #9 | Yes |
-| NFR-5 | Concurrent Operation — Servos maintain timing while TTS and STT run | Non-Functional | Integration #8, Regression #1 | Yes |
+| NFR-4 | Hardware Safety — Perform boot-time hardware safety check and report wiring issues | Non-Functional | Integration #9 (verified during startup) | Yes |
 
 
 Appendix
