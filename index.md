@@ -20,19 +20,19 @@ A capstone senior project that transforms a Meccanoid G15KS toy robot into a ful
 
 #### [Custom Map \| CSCI 315](project1)
 
-![screenshot](images/hangman.jpg)
+![screenshot](images/custom_map.png)
 
 ---
 
 #### [Connect Four \| CSCI 325](project2)
 
-![screenshot](images/connect_four.jpg)
+![screenshot](images/connect_four_new.png)
 
 ---
 
 #### [PDF Citation Parser \| CSCI 495](project3)
 
-![screenshot](images/pdf_parser.jpg)
+![screenshot](images/pdf_parser_new.png)
 
 ---
 
