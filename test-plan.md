@@ -25,8 +25,6 @@ The objective of this test plan is to verify that the main functional and non-fu
 
 ### Features to be Tested
 
-(Referenced from Requirements Document – CSCI 497)
-
 - Speech Recognition Module (Vosk offline STT)
 - AI Response Engine (GPT-4o-mini via OpenAI API)
 - Three-Tier Text-to-Speech Pipeline (OpenAI TTS, Piper, espeak)
@@ -153,18 +151,18 @@ User Acceptance Testing (UAT) was conducted using observation and verbal feedbac
 
 | # | TEST ITEM | EXPECTED RESULTS | ACTUAL RESULTS | DATE |
 | - | --------- | ---------------- | -------------- | ---- |
-| 1 | User says "Hey Gizmo, who are you?" | Robot responds with personality introduction | Gizmo introduced itself with personality | Feb 2026 |
-| 2 | User says "Wave at me" | Robot performs wave gesture | Wave gesture executed successfully | Feb 2026 |
-| 3 | User says "What's the weather today?" | Robot searches web and speaks current weather | Correct weather reported | Feb 2026 |
-| 4 | Multi-command interaction (5 commands) | No system crash, all commands executed | All commands processed without errors | Feb 2026 |
-| 5 | User says "Remember my name is [name]" | Robot stores name in persistent memory | Name stored and recalled after restart | Feb 2026 |
+| 1 | User says "Hey Gizmo, who are you?" | Robot responds with personality introduction | Gizmo introduced itself with personality | March 2026 |
+| 2 | User says "Wave at me" | Robot performs wave gesture | Wave gesture executed successfully | March 2026 |
+| 3 | User says "What's the weather today?" | Robot searches web and speaks current weather | Correct weather reported | March 2026 |
+| 4 | Multi-command interaction (5 commands) | No system crash, all commands executed | All commands processed without errors | April 2026 |
+| 5 | User says "Remember my name is [name]" | Robot stores name in persistent memory | Name stored and recalled after restart | April 2026 |
 
 
 Test Deliverables
 -----------------
 
-- Test Plan (this document)
-- Automated Test Scripts (`test_gizmo.py` — 31 test cases)
+- Test Plan
+- Automated Test Scripts (`test_gizmo.py` — 33 test cases)
 - Hardware Diagnostic Scripts (`diag_quick.py`, `test_wiring.py`, `test_motors.py`, `test_arms.py`)
 - Test Result Reports (31/31 automated tests passed)
 - Demonstration Video Recording
@@ -179,7 +177,7 @@ Schedule
 | Integration Testing Complete | Week 2 |
 | System Stability Testing | Week 3 |
 | User Acceptance Testing | Week 4 |
-| Final Demo Ready | Before March 2, 2026 |
+| Final Demo Ready | Before April 20, 2026 |
 
 
 Risks
