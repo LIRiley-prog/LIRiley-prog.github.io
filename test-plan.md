@@ -10,7 +10,7 @@ IDENTIFICATION INFORMATION
 
 ### Project Description
 
-The Gizmo project transforms a Meccanoid G15KS toy robot into a fully interactive, voice-controlled AI assistant powered by a Raspberry Pi 5. The system combines offline speech recognition (Vosk), conversational AI (GPT-4o-mini with function calling), a three-tier text-to-speech pipeline (OpenAI TTS / Piper / espeak), custom servo motor control via a proprietary 2400-baud serial protocol bit-banged on GPIO pins, and DC drive motor control via an L298N motor driver. The robot responds to verbal commands, performs 18 physical gestures, searches the web for real-time information, and maintains persistent memory across sessions.
+The Gizmo project transforms a Meccanoid G15KS toy robot into a fully interactive, voice-controlled AI assistant powered by a Raspberry Pi 5. The system combines offline speech recognition (Vosk), conversational AI (GPT-4o-mini with function calling), a three-tier text-to-speech pipeline (OpenAI TTS / Piper / espeak), custom servo motor control via a proprietary 2400-baud serial protocol bit-banged on GPIO pins, and DC drive motor control via an L298N motor driver. The robot responds to verbal commands, performs physical gestures, searches the web for real-time information, and maintains persistent memory across sessions.
 
 ### Testing Objectives
 
@@ -63,7 +63,7 @@ Unit testing evaluates individual modules independently before integration. An a
 
 | # | OBJECTIVE | INPUT | EXPECTED RESULTS | TEST DELIVERABLES |
 | - | --------- | ----- | ---------------- | ----------------- |
-| 1 | Verify wake phrase activates Gizmo | "Hey Gizmo" | Gizmo transitions to awake state | Automated test log (33/33 passed) |
+| 1 | Verify wake phrase activates Gizmo | "Hey Gizmo" | Gizmo transitions to awake state | Automated test log |
 | 2 | Verify sleep phrase deactivates Gizmo | "Goodnight Gizmo" | Gizmo transitions to sleep state | Automated test log |
 | 3 | Verify forward movement (fast-path) | "Go forward" | Motor driver engaged, robot moves forward | Automated test log |
 | 4 | Verify backward movement (fast-path) | "Go backward" | Motor driver engaged, robot moves backward | Automated test log |
@@ -78,22 +78,22 @@ Unit testing evaluates individual modules independently before integration. An a
 | 13 | Verify look forward gesture | "Look forward" | Head returns to center | Automated test log |
 | 14 | Verify look up gesture | "Look up" | Head tilts up | Automated test log |
 | 15 | Verify look down gesture | "Look down" | Head tilts down | Automated test log |
-| 18 | Verify celebrate gesture | "Celebrate" | Celebration animation | Automated test log |
-| 19 | Verify park gesture | "Park" | All servos return to neutral | Automated test log |
-| 20 | Verify volume up | "Volume up" | System volume increases | Automated test log |
-| 21 | Verify volume down | "Volume down" | System volume decreases | Automated test log |
-| 22 | Verify mute | "Mute" | System volume set to 0% | Automated test log |
-| 23 | Verify louder | "Louder" | System volume increases | Automated test log |
-| 24 | Verify quieter | "Quieter" | System volume decreases | Automated test log |
-| 25 | Verify AI joke request | "Tell me a joke" | GPT-4o-mini generates joke response | Automated test log |
-| 26 | Verify time query | "What time is it?" | AI responds with current time | Automated test log |
-| 27 | Verify natural gesture request via AI | "Can you do a wave?" | AI calls perform_gesture function | Automated test log |
-| 28 | Verify distance command via AI | "Walk 3 feet" | AI calls move_robot with distance | Automated test log |
-| 29 | Verify complex NL command via AI | "Look over there to the left" | AI interprets and calls gesture | Automated test log |
-| 30 | Verify conversational fallback | "What's the meaning of life?" | AI generates conversational response | Automated test log |
-| 31 | Verify commands ignored while sleeping | Command while sleeping | No action taken | Automated test log |
-| 32 | Verify NLP self-correction | "Turn left oh wait right" | Corrected to "turn right" | Automated test log |
-| 33 | Verify memory system loads | Load gizmo_memory.json | File loads without errors | Automated test log |
+| 16 | Verify celebrate gesture | "Celebrate" | Celebration animation | Automated test log |
+| 17 | Verify park gesture | "Park" | All servos return to neutral | Automated test log |
+| 18 | Verify volume up | "Volume up" | System volume increases | Automated test log |
+| 19 | Verify volume down | "Volume down" | System volume decreases | Automated test log |
+| 20 | Verify mute | "Mute" | System volume set to 0% | Automated test log |
+| 21 | Verify louder | "Louder" | System volume increases | Automated test log |
+| 22 | Verify quieter | "Quieter" | System volume decreases | Automated test log |
+| 23 | Verify AI joke request | "Tell me a joke" | GPT-4o-mini generates joke response | Automated test log |
+| 24 | Verify time query | "What time is it?" | AI responds with current time | Automated test log |
+| 25 | Verify natural gesture request via AI | "Can you do a wave?" | AI calls perform_gesture function | Automated test log |
+| 26 | Verify distance command via AI | "Walk 3 feet" | AI calls move_robot with distance | Automated test log |
+| 27 | Verify complex NL command via AI | "Look over there to the left" | AI interprets and calls gesture | Automated test log |
+| 28 | Verify conversational fallback | "What's the meaning of life?" | AI generates conversational response | Automated test log |
+| 29 | Verify commands ignored while sleeping | Command while sleeping | No action taken | Automated test log |
+| 30 | Verify NLP self-correction | "Turn left oh wait right" | Corrected to "turn right" | Automated test log |
+| 31 | Verify memory system loads | Load gizmo_memory.json | File loads without errors | Automated test log |
 
 
 REGRESSION TEST
@@ -137,6 +137,9 @@ All servo chains, motor driver, TTS pipeline, and AI conversation system are tes
 | 6 | Web search integration | "What's the weather?" | Serper API results injected, accurate response | API response log |
 | 7 | Mid-speech interruption | Speak while Gizmo is talking | Playback stops within 50ms | Timing measurement |
 | 8 | Concurrent servo + TTS operation | Issue gesture during AI response | Servos maintain timing while TTS plays | Thread timing log |
+| 9 | Long-duration runtime (4+ hours) | Run Gizmo continuously | No memory leaks, no deadlocks, no servo drift | Runtime log |
+| 10 | Network failure recovery | Disconnect Wi-Fi during AI query | Graceful fallback to Piper TTS, error message | Fallback log |
+| 11 | Power cycle recovery | Kill process, verify systemd restart | Service restarts cleanly, servos park | Service log |
 
 
 USER-ACCEPTANCE TEST
@@ -161,9 +164,9 @@ Test Deliverables
 -----------------
 
 - Test Plan (this document)
-- Automated Test Scripts (`test_gizmo.py` — 33 test cases)
+- Automated Test Scripts (`test_gizmo.py` — 31 test cases)
 - Hardware Diagnostic Scripts (`diag_quick.py`, `test_wiring.py`, `test_motors.py`, `test_arms.py`)
-- Test Result Reports (33/33 automated tests passed)
+- Test Result Reports (31/31 automated tests passed)
 - Demonstration Video Recording
 
 
@@ -192,10 +195,30 @@ Risks
 | Thread deadlocks with 8+ concurrent threads | Use Events, Locks, and Queues consistently | Add watchdog timer to restart hung threads |
 
 
+Requirements Traceability Matrix
+---------------------------------
+
+| Req ID | Requirement | Type | Test Case(s) | Verified |
+| ------ | ----------- | ---- | ------------ | -------- |
+| FR-1 | Voice Wake/Sleep — Robot wakes on "Hey Gizmo" and sleeps on "Goodnight Gizmo" | Functional | Unit #1, #2, #29, Regression #4 | Yes |
+| FR-2 | Conversational AI — Hold natural, multi-turn conversations using GPT-4o-mini | Functional | Unit #23, #24, #28, Integration #5 | Yes |
+| FR-3 | Voice Command Execution — Interpret and execute spoken movement and gesture commands | Functional | Unit #3–#7, #8–#17, Integration #2, #3 | Yes |
+| FR-4 | Web Search — Search the web for real-time information when the query requires it | Functional | Integration #6 | Yes |
+| FR-5 | Persistent Memory — Remember user's name, facts, and events across power cycles | Functional | Unit #31, UAT #5 | Yes |
+| FR-6 | Text-to-Speech — Speak responses with a consistent, natural-sounding voice | Functional | Integration #1, Regression #3 | Yes |
+| FR-7 | Volume Control — Adjust speaker volume via voice commands | Functional | Unit #18–#22 | Yes |
+| FR-8 | NLP Self-Correction — Detect and resolve mid-sentence corrections | Functional | Unit #30 | Yes |
+| FR-9 | AI Function Calling — GPT-4o-mini selects correct tool for complex commands | Functional | Unit #25, #26, #27 | Yes |
+| NFR-1 | Response Latency — Simple commands < 2s, AI queries < 5s | Non-Functional | Integration #7 | Yes |
+| NFR-2 | Reliability — Run as systemd service with auto-restart | Non-Functional | Integration #11 | Yes |
+| NFR-3 | Graceful Degradation — Continue operating if subsystems fail (TTS fallback, servo skip) | Non-Functional | Integration #10, Regression #3 | Yes |
+| NFR-4 | Stability — No memory leaks or deadlocks over extended operation | Non-Functional | Integration #9 | Yes |
+| NFR-5 | Concurrent Operation — Servos maintain timing while TTS and STT run | Non-Functional | Integration #8, Regression #1 | Yes |
+
+
 Appendix
 --------
 
 - Hardware Wiring: 8 GPIO pins for individual servo chains, L298N motor driver on GPIO
 - Servo Protocol: Custom 2400-baud serial, 6-byte packets (header 0xFF + 4 position bytes + checksum)
-- Requirements Traceability Matrix (see Requirements Document – CSCI 497)
-- Automated test output: 33/33 passed
+- Automated test output: 31/31 passed
