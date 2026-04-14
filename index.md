@@ -36,6 +36,12 @@ A capstone senior project that transforms a Meccanoid G15KS toy robot into a ful
 
 ---
 
+#### [Endpoint Security Project \| CSCI 352](project5)
+
+![screenshot](images/endpoint_security.png)
+
+---
+
 ### Ethics Papers
 
 #### [Software Ethics](pdf/Ethics%20(1).pdf)
@@ -43,24 +49,24 @@ A capstone senior project that transforms a Meccanoid G15KS toy robot into a ful
 - **Class:** CSCI 405 – Principles of Cybersecurity
 - **Grade:** B
 
-#### Paper 2 Title
+#### [Automated Ethics](pdf/Automated_Ethics.docx)
 
-- **Class:** 
-- **Grade:**
+- **Class:** CSCI 315 – Data Structure Analysis
+- **Grade:** A
 
-#### Paper 3 Title
+#### [Ethical and Legal Analysis in a Corporate Database](pdf/Database_Ethics_Paper.docx)
 
-- **Class:** 
-- **Grade:**
+- **Class:** CSCI 419 – Database Management Systems
+- **Grade:** A
 
 ---
 
 ### Presentations
 
-#### Presentation 1 Title
+#### [Endpoint Security – Hands-On Lab Presentation](project5)
 
-- **Class:**
-- **Grade:**
+- **Class:** CSCI 352 – Cyber Defense
+- **Grade:** In Progress
 
 #### Presentation 2 Title
 
