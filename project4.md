@@ -115,7 +115,7 @@ The project draws from several areas of research and technology:
 
 ### 5.1 System Overview
 
-Gizmo's software architecture is organized into 12 modular sections within a single main application file (`main.py`, ~2,000 lines) plus a dedicated servo driver module (`meccanoid_smart_servo.py`, ~312 lines). The system operates through multiple concurrent threads coordinated by thread-safe primitives (`threading.Event`, `threading.Lock`, `queue.Queue`).
+Gizmo's software architecture is organized into 12 modular sections within a single main application file (`main.py`, ~2,000 lines) plus a dedicated servo driver module (`meccanoid_smart_servo.py`, ~477 lines). The system operates through multiple concurrent threads coordinated by thread-safe primitives (`threading.Event`, `threading.Lock`, `queue.Queue`).
 
 The overall data flow is: the USB microphone continuously streams audio into a callback function, which feeds raw PCM data (resampled to 16 kHz if necessary) into a Vosk speech recognizer. When the recognizer produces a finalized transcript with sufficient words and a pause is detected, the text enters the three-tier command parser. The parser first applies NLP corrections, then checks a fast-path lookup table, and finally falls back to GPT-4o-mini function calling. The resulting action — movement, gesture, AI conversation, or system command — is executed, and speech output is generated through the three-tier TTS pipeline.
 
@@ -358,7 +358,7 @@ With 8+ concurrent threads (8 servo chains, audio callback, idle animation, main
 
 1. **Computer Vision** — Add a camera module for face recognition, object detection, and visual awareness using OpenCV or a vision AI model.
 2. **Emotion Detection** — Use sentiment analysis on user speech to adjust Gizmo's gestures and tone dynamically (e.g., comforting gestures when the user sounds upset).
-3. **LED Eye Expressions** — Wire up the Meccanoid's built-in LED eyes to display different colors and patterns based on mood and state.
+3. **LED Eye Expressions** — *(Implemented)* The Meccanoid's built-in LED eyes are wired on GPIO 21 and display seven colors (off, red, green, yellow, blue, cyan, white) based on Gizmo's current state: blue while idle/listening, green while speaking, yellow while thinking, red on error, and a white flash on wake/boot.
 4. **Autonomous Navigation** — Add ultrasonic or LiDAR distance sensors for obstacle avoidance and autonomous room exploration.
 5. **Multi-User Recognition** — Use voice fingerprinting to identify different users and load personalized memory profiles.
 6. **Streaming TTS** — Implement streaming text-to-speech that begins speaking as tokens arrive from the AI, rather than waiting for the complete response.
