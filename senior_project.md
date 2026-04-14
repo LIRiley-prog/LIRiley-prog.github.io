@@ -14,9 +14,9 @@ Gizmo – Meccanoid AI Assistant
 
 Gizmo is a capstone senior project that transforms a Meccanoid G15KS toy robot into a fully interactive AI assistant. Powered by a Raspberry Pi 5, Gizmo can hold natural conversations, respond to voice commands, and express itself through physical gestures — waving, nodding, raising its arms, and tilting its head while "thinking."
 
-The robot's brain is powered by OpenAI's GPT-4o model, giving it the ability to answer questions, hold context-aware conversations, and even search the web for real-time information. Vosk provides offline speech recognition, so Gizmo can always listen — even without an internet connection. Speech output is handled through `espeak` text-to-speech synthesis.
+The robot's brain is powered by OpenAI's GPT-4o-mini model, giving it the ability to answer questions, hold context-aware conversations, and even search the web for real-time information. Vosk provides offline speech recognition, so Gizmo can always listen — even without an internet connection. Speech output is handled through a three-tier TTS system: OpenAI TTS for highest quality, Piper for offline neural synthesis, and espeak as a last-resort fallback.
 
-On the hardware side, six servo motors (head pan, head tilt, both shoulders, both elbows) are controlled through a PCA9685 servo driver board, with per-servo calibration for precise movement. Drive motors are managed via an L298N motor driver and the Gpiozero library, allowing Gizmo to move forward, backward, and turn.
+On the hardware side, eight Meccanoid G15KS Smart Servos (head pan, head tilt, left/right shoulder ×2, left/right elbow) are controlled via a custom 2400-baud bit-bang serial protocol on individual GPIO pins. An LED eye module on GPIO 21 displays state-based colors. Drive motors are managed via an L298N motor driver and the gpiozero library, allowing Gizmo to move forward, backward, and turn.
 
 The project was developed as part of a senior capstone team (Green Team) over two semesters, involving system design, hardware integration, iterative software development, and formal presentations.
 
@@ -26,7 +26,8 @@ The project was developed as part of a senior capstone team (Green Team) over tw
 |---|---|
 | Raspberry Pi 5 | Main controller / AI processing |
 | Meccanoid G15KS Body | Physical robot frame with articulated limbs |
-| PCA9685 Servo Driver | Controls 6 servos (head, shoulders, elbows) |
+| Meccanoid Smart Servos (×8) | Head pan, head tilt, shoulders, elbows — custom 2400-baud serial protocol via GPIO |
+| Meccanoid LED Eyes (GPIO 21) | 7-color state indicator (blue=idle, green=speaking, yellow=thinking, red=error) |
 | L298N Motor Driver | Controls drive motors for movement |
 | USB Microphone | Voice input for speech recognition |
 | Speaker | Audio output for text-to-speech |
@@ -35,26 +36,21 @@ The project was developed as part of a senior capstone team (Green Team) over tw
 
 | Library | Role |
 |---|---|
-| OpenAI API (GPT-4o) | Conversational AI and decision-making |
+| OpenAI API (GPT-4o-mini) | Conversational AI, function calling, and TTS |
 | Vosk | Offline speech-to-text recognition |
-| espeak | Text-to-speech synthesis |
-| adafruit-pca9685 | Servo motor control via I2C |
-| gpiozero | GPIO-based drive motor control |
+| Piper TTS | Offline neural text-to-speech (fallback) |
+| espeak | Lightweight TTS (last-resort fallback) |
+| gpiozero | GPIO pin control for servo bit-banging and motor driver |
 | sounddevice | Microphone audio capture |
 
 ## How to Run
 
 ```bash
 # Install dependencies
-pip install openai vosk gpiozero adafruit-circuitpython-pca9685 sounddevice
+pip install openai vosk gpiozero sounddevice numpy python-dotenv requests
 
 # Run the robot
 python main.py
-
-# Optional flags
-python main.py --debug      # Verbose logging
-python main.py --simulate   # Run without hardware
-python main.py --safe       # Restricted movement mode
 ```
 
 ## Voice Interaction
@@ -63,7 +59,7 @@ Gizmo is controlled entirely through voice. Once running:
 
 - **Say a wake phrase** — Gizmo wakes up and begins listening
 - **Give a movement command** — "move forward," "look left," "wave," "raise arms"
-- **Ask a question** — Gizmo uses GPT-4o to respond conversationally
+- **Ask a question** — Gizmo uses GPT-4o-mini to respond conversationally
 - **Say a sleep phrase** — Gizmo stops listening and parks to a neutral position
 
 Arm movements and gestures are triggered automatically based on conversation context. The terminal displays a real-time log of recognized speech and robot responses.
@@ -80,9 +76,9 @@ Gizmo includes pre-programmed gesture sequences:
 
 ## Additional Considerations
 
-One of the biggest challenges was integrating multiple hardware components — servos, motors, and a microphone — all running simultaneously without conflicts. Python threading was essential to ensure Gizmo could listen, think, speak, and move at the same time without blocking.
+The most significant technical challenge was the servo control protocol. The Meccanoid smart servos use a proprietary 2400-baud serial protocol — not standard PWM. A custom bit-bang driver was built using `ctypes` to call the Linux kernel's `clock_nanosleep` for precise timing, which also releases the Python GIL to prevent audio processing from corrupting servo signals.
 
-Per-servo calibration was critical since the Meccanoid's original servos have different mechanical ranges. Each servo channel has individually tuned min/max pulse widths and angle limits to prevent damage and ensure smooth motion.
+Per-servo calibration was critical since each servo has different mechanical ranges. Park positions were tuned by hand so Gizmo starts in a natural resting pose without jerking on boot.
 
 Coordinating the team's work across two semesters required disciplined use of Git, regular status meetings, and iterative design reviews.
 
