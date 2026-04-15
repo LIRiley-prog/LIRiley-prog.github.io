@@ -369,9 +369,7 @@ With 8+ concurrent threads (8 servo chains, audio callback, idle animation, main
 
 ## 10. Defense Presentation Slides
 
-[Defense Presentation Slides (PDF)](pdf/SeniorProjectDefense.pdf)
-
-*(To be uploaded after the defense presentation.)*
+[Defense Presentation Slides (PPTX)](pdf/Gizmo_Senior_Project_Defense.pptx)
 
 ---
 
