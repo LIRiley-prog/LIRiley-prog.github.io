@@ -56,7 +56,7 @@ A capstone senior project that transforms a Meccanoid G15KS toy robot into a ful
 
 #### [The Good Hacker](pdf/The_Good_Hacker.pdf)
 
-- **Class:** CSCI 405 – Principles of Cybersecurity
+- **Class:** CSCI 305 – Procedural Programming
 - **Grade:** A
 
 ---
