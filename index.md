@@ -68,9 +68,9 @@ A capstone senior project that transforms a Meccanoid G15KS toy robot into a ful
 - **Class:** CSCI 352 – Cyber Defense
 - **Grade:** In Progress
 
-#### Presentation 2 Title
+#### [PDF Citation Parser – Video Walkthrough](pdf/PDF%20Presentation.mp4){:target="_blank"}
 
-- **Class:**
+- **Class:** CSCI 495
 - **Grade:**
 
 ---
