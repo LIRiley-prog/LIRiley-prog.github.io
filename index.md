@@ -71,7 +71,7 @@ A capstone senior project that transforms a Meccanoid G15KS toy robot into a ful
 #### [PDF Citation Parser – Video Walkthrough](pdf/PDF%20Presentation.mp4){:target="_blank"}
 
 - **Class:** CSCI 495
-- **Grade:**
+- **Grade:** A
 
 ---
 
