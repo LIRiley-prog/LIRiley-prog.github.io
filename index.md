@@ -52,12 +52,12 @@ A capstone senior project that transforms a Meccanoid G15KS toy robot into a ful
 #### [Automated Ethics](pdf/Automated_Ethics.docx)
 
 - **Class:** CSCI 315 – Data Structure Analysis
-- **Grade:** A
+- **Grade:** B
 
 #### [Ethical and Legal Analysis in a Corporate Database](pdf/Database_Ethics_Paper.docx)
 
 - **Class:** CSCI 419 – Database Management Systems
-- **Grade:** A
+- **Grade:** B+
 
 ---
 
