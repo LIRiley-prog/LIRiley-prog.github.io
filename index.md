@@ -49,12 +49,12 @@ A capstone senior project that transforms a Meccanoid G15KS toy robot into a ful
 - **Class:** CSCI 405 – Principles of Cybersecurity
 - **Grade:** B
 
-#### [Automated Ethics](pdf/Automated_Ethics.docx)
+#### [Automated Ethics](pdf/Automated_Ethics.pdf)
 
 - **Class:** CSCI 315 – Data Structure Analysis
 - **Grade:** B
 
-#### [Ethical and Legal Analysis in a Corporate Database](pdf/Database_Ethics_Paper.docx)
+#### [Ethical and Legal Analysis in a Corporate Database](pdf/Database_Ethics_Paper.pdf)
 
 - **Class:** CSCI 419 – Database Management Systems
 - **Grade:** B+
