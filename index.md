@@ -63,11 +63,7 @@ A capstone senior project that transforms a Meccanoid G15KS toy robot into a ful
 
 ### Presentations
 
-<<<<<<< HEAD
 #### [Endpoint Security – Hands-On Lab Presentation](pdf/Endpoint%20Security.pdf){:target="_blank"}
-=======
-#### [Endpoint Security – Hands-On Lab Presentation](pdf/Endpoint_Security.pdf){:target="_blank"}
->>>>>>> c8b7c7b0974225d6bbcf3f8a428fe37d60c61448
 
 - **Class:** CSCI 352 – Cyber Defense
 - **Grade:** In Progress
